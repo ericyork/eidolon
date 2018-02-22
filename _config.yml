@@ -16,7 +16,7 @@
 locale: en-US
 title: "Eidolon"
 description: "Idle thoughts on rhetoric, technology, and culture."
-logo: "/assets/images/logo.png" # path of site logo, e.g. "/assets/images/logo.png"
+logo: "/assets/images/logo-lg.png" # path of site logo, e.g. "/assets/images/logo.png"
 date_format: "%B %-d, %Y"
 read_time: true
 words_per_minute: 200
