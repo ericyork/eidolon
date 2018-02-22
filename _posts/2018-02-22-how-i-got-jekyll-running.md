@@ -10,20 +10,17 @@ I got it working basically by following the [instructions here](https://www.jame
 ### Pre-Reqs
 
 Ok, there are some things I needed first:
-
 + Heroku account
 + Github account
 + Jekyll and dependencies all installed.
 
 As well as,
-
 + A generated jekyll site with some basic content.
 
 
 ### Install Gems
 
 I included the following gems in my project's Gemfile.
-
 + `gem "rack-jekyll"`
 + `gem "rake"`
 + `gem "puma"`
@@ -33,7 +30,6 @@ Then I ran `bundle install` from within project `root` to build in the new gems 
 ### Create Necessary Files and Rules
 
 Next, I needed to create some files for the new gems to work with. Both of these files were created in `root`.
-
 + `$ touch Procfile`
 + `$ touch config.ru`
 
