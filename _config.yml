@@ -13,31 +13,46 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Eidolon
-email: eyork@clarkson.edu
-description: >- # this means to ignore newlines until "baseurl:"
-  Idle thoughts about rhetoric, technology, culture, and web design and development.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: lettersinfire
-github_username:  ericyork
+locale: en-US
+title: "Eidolon"
+description: "Idle thoughts on rhetoric, technology, and culture."
+logo: "/assets/images/logo.png" # path of site logo, e.g. "/assets/images/logo.png"
+date_format: "%B %-d, %Y"
+read_time: true
+words_per_minute: 200
+mathjax: true
+google_fonts:
+  - name: "Lato"
+    weights: "300,300i,900,900i"
+  - name: "Gentium Book Basic"
+    weights: "400,400i,700,700i"
+google_analytics: # Google Analytics id, e.g. "UA-NNNNNNNN-N"
+disqus:
+  shortname: # Disqus shortname, e.g. "my_disqus_shortname"
+twitter:
+  username: lettersinfire # site's Twitter username
+
+# Liquid
+liquid:
+  error_mode: strict
 
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-so-simple
-plugins:
-  - jekyll-feed
-  
-footer_links:
-  - title: Twitter
-    url: https://twitter.com/username
-    icon: fab fa-twitter-square
-  - title: GitHub
-    url: https://github.com/mmistakes
-    icon: fab fa-github-square
-  - title: Feed
-    url: atom.xml
-    icon: fas fa-rss-square
+feed:
+  path: atom.xml
+
+# Pagination - https://jekyllrb.com/docs/pagination/
+paginate: 10
+paginate_path: /page:num/
+
+# Search
+search_full_content: false
+
+# Taxonomoy pages
+category_archive_path: "/categories/#"
+tag_archive_path: "/tags/#"
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
@@ -49,3 +64,69 @@ footer_links:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+
+# Collections
+collections:
+  recipes:
+    output: true
+    permalink: /:collection/:path/
+
+# Front Matter Defaults
+defaults:
+  # Post defaults
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      comments: true
+      share: true
+  # Recipe defaults
+  - scope:
+      path: "_recipes"
+      type: recipes
+    values:
+      layout: post
+      comments: true
+      share: true
+
+# Site Author
+author:
+  name: Eric J. York
+  picture: /images/michael-rose-photo.jpg
+  email: eyork@clarkson.edu
+  twitter: lettersinfire
+  links:
+    - title: Facebook
+      url: https://facebook.com/eric.york.564
+      icon: fab fa-facebook-square
+    - title: Twitter
+      url: https://twitter.com/lettersinfire
+      icon: fab fa-twitter-square
+    - title: Linkedin
+      url: https://linkedin.com/ericjyork
+      icon: fab fa-linkedin
+    - title: GitHub
+      url: https://github.com/ericyork
+      icon: fab fa-github-square
+
+# Footer Links
+footer_links:
+  - title: Facebook
+    url: https://facebook.com/eric.york.564
+    icon: fab fa-facebook-square
+  - title: Twitter
+    url: https://twitter.com/lettersinfire
+    icon: fab fa-twitter-square
+  - title: Linkedin
+    url: https://linkedin.com/ericjyork
+    icon: fab fa-linkedin
+  - title: GitHub
+    url: https://github.com/ericyork
+    icon: fab fa-github-square
