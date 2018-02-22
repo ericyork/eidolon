@@ -8,3 +8,7 @@ categories: dev-docs
 This is the first new post on the site. It should be tracked on Github with deployment TBD.
 
 Here is the [link to the GitHub Repo](https://github.com/ericyork/eidolon).
+
+### Test Check
+
+Tested on: {{ site.time }}
