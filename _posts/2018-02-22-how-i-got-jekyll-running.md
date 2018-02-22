@@ -29,17 +29,28 @@ Then I ran `bundle install` from within project `root` to build in the new gems 
 
 ### Create Necessary Files and Rules
 
-Next, I needed to create some files for the new gems to work with. Both of these files were created in `root`.
+Next, I needed to create some files for the new gems to work with. All of these files were created in the project's `root`.
 + `$ touch Procfile`
 + `$ touch config.ru`
++ `$ touch rakefile.rb`
 
 Inside `Procfile` (btw, no extension of that file), I added the following lines:
 
 `web: bundle exec puma -t 8:32 -w 3 -p $PORT`
 
-And inside `config.ru`, I added these lines:
+Meanwhile, inside `config.ru`, I added these lines:
 
 `web: bundle exec puma -t 8:32 -w 3 -p $PORT`
+
+Finally, I added the following lines to `rakefile.rb`
+
+`task :build do
+  system('bundle exec jekyll build')
+end
+
+namespace :assets do
+  task precompile: :build
+end`
 
 ### Stage, Comment, Commit and Push Changes
 
