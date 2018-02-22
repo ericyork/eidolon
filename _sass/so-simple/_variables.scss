@@ -52,24 +52,24 @@ $page-title-weight: 900 !default;
 $entry-title-weight: 900 !default;
 
 /* Colors */
-$base-color: #000 !default;
-$text-color: #000 !default;
-$accent-color: #34374C !default;
-$nav-color: #fff !default;
-$background-color: #fff !default;
-$nav-background-color: #000 !default;
+$base-color: #444 !default;
+$text-color: #444 !default;
+$accent-color: #7076a0 !default;
+$nav-color: #EFEFEF !default;
+$background-color: #EFEFEF !default;
+$nav-background-color: #444 !default;
 $code-background-color: tint($base-color, 95%) !default;
 $border-color: tint($base-color, 80%) !default;
 
-$primary-color: #000 !default;
+$primary-color: #444 !default;
 $success-color: #62c462 !default;
 $warning-color: #f89406 !default;
 $danger-color: #ee5f5b !default;
 $info-color: #52adc8 !default;
 
 /* YIQ color contrast */
-$yiq-contrasted-dark-default: #000 !default;
-$yiq-contrasted-light-default: #fff !default;
+$yiq-contrasted-dark-default: #444 !default;
+$yiq-contrasted-light-default: #EFEFEF !default;
 $yiq-contrasted-threshold: 175 !default;
 $yiq-debug: false !default;
 
@@ -122,8 +122,8 @@ $main-max-width: $medium !default;
 $main-sidebar-max-width: $large !default;
 
 /* Site logo */
-$site-logo-width: 150px !default;
-$site-logo-height: 56px !default;
+$site-logo-width: 200px !default;
+$site-logo-height: 75px !default;
 
 /* Border radius */
 $border-radius: 0.25rem !default;
