@@ -1,16 +1,18 @@
-# Sample site navigation links
+# Site navigation links
 
-- title: Home
+- title: Eidos
   url: /
-- title: UI Kit
+- title: Topoi
   url: /uikit.html
-- title: Posts
-  url: /posts/
-- title: Categories
-  url: /categories/
-- title: Tags
-  url: /tags/
-- title: Recipes
-  url: /recipes/
+- title: Taxis
+  url: /order/
+- title: Lexis
+  url: /grammar/
+- title: Techne
+  url: /tools/
+- title: Poroi
+  url: /passages/
+- title: Dolos
+  url: /tricks/
 - title: Search
   url: /search/
