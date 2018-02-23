@@ -1,0 +1,16 @@
+# Sample site navigation links
+
+- title: Home
+  url: /
+- title: UI Kit
+  url: /uikit.html  
+- title: Posts
+  url: /posts/
+- title: Categories
+  url: /categories/
+- title: Tags
+  url: /tags/
+- title: Recipes
+  url: /recipes/
+- title: Search
+#   url: /search/
