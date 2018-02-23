@@ -13,7 +13,7 @@ Using my text-editor [Atom](http://atom.io), I create a post, name it with the d
 
 Next, I commit the changes (with comments) and push them up to GitHub.
 
-Finally, I deploy to Heroku with 'git push heroku master'.
+Finally, I deploy to Heroku with `git push heroku master`.
 
 ### Make a Theme Change
 
