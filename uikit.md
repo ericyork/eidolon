@@ -6,7 +6,7 @@ categories: dev-docs
 last_modified_at: 2018-02-22T23:26:49-05:00
 ---
 
-A variety of common HTML elements to demonstrate the theme's stylesheet and verify they have been styled appropriately. Borrowed shamelessly from [MadeMistakes](https://github.com/mmistakes/so-simple-theme/blob/master/example/_posts/2013-01-11-markup-html-elements-and-formatting.md).
+A variety of common HTML elements to demonstrate the theme's stylesheet and verify they have been styled appropriately. ~~Borrowed shamelessly~~ Straight up stolen from [MadeMistakes's Git repo](https://github.com/mmistakes/so-simple-theme/blob/master/example/_posts/2013-01-11-markup-html-elements-and-formatting.md).
 
 # Header one
 

@@ -19,7 +19,7 @@ Finally, I deploy to Heroku with `git push heroku master`.
 
 All the .scss partials have already been imported into the project directory, so editing them directly is enough to override them. If I want to change variables, for example, I'd just open `_variables.scss` in the text-editor, write the changes, and save the file. The preview should take effect when a page is reloaded on the dev server.
 
-**Note:** If changes are made to `_config.yml`, they will not update automatically on the preview server. Instead, in the terminal window that contains the running server process, press `control+c`. This will kill the server process. Then, I can run `bundle exec jekyll serve` to rebuild the site and relaunch the dev server.
+**Note:** If changes are made to `_config.yml`, they will not update automatically on the preview server. Instead, in the terminal window that contains the running server process, press <kbd>control+c</kbd>. This will kill the server process. Then, I can run `bundle exec jekyll serve` to rebuild the site and relaunch the dev server.
 
 When the last change has been made in a given commit, and it's time to deploy, the main.css needs to be recompiled. This must be done in this order:
 ```
