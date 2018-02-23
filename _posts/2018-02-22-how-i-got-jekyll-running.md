@@ -1,63 +1,30 @@
 ---
 layout: post
-title:  "How I Got Jekyll Running on Heroku"
-date:   2018-02-22 16:31:16 -0500
+title:  "My Basic Jekyll Workflow"
+date:   2018-02-22 19:07:16 -0500
 categories: dev-docs
 ---
 
-I got it working basically by following the [instructions here](https://www.jamesward.com/2014/09/24/jekyll-on-heroku). Mostly this is just to document for myself how it was accomplished. **Update:** The above instructions were incomplete. I'm not exactly sure way, probably somehting I did wrong/missed/etc., but in any case, in order to get it to work, I *also* had to add a rakefile.rb and so the project would build right for Heroku. 
+These are my basic workflows right now (as best I understand them) for working with Jekyll + Heroku on a variety of common tasks.
 
-### 0.0 Pre-Reqs
+### Create a Post
 
-Ok, there are some things I needed first:
-+ Heroku account
-+ Github account
-+ Jekyll and dependencies all installed.
+Using my text-editor [Atom](http://atom.io), I create a post, name it with the date and title, add the YAML front-matter (layout, title, date, and categories ) and save it into the project's `/_posts` directory. Changes can be previewed on the development server by running `bundle exec jekyll serve` in the terminal and visiting /localhost:4000, or, if the server is already running, simply by refreshing the page.
 
-As well as,
-+ A generated jekyll site with some basic content.
+Next, I commit the changes (with comments) and push them up to GitHub.
 
+Finally, I deploy to Heroku with 'git push heroku master'.
 
-### 1.0 Install Gems
+### Make a Theme Change
 
-I included the following gems in my project's Gemfile.
-+ `gem "rack-jekyll"`
-+ `gem "rake"`
-+ `gem "puma"`
+All the .scss partials have already been imported into the project directory, so editing them directly is enough to override them. If I want to change variables, for example, I'd just open `_variables.scss` in the text-editor, write the changes, and save the file. The preview should take effect when a page is reloaded on the dev server.
 
-Then I ran `bundle install` from within project `root` to build in the new gems and install dependencies.
+**Note:** If changes are made to `_config.yml`, they will not update automatically on the preview server. Instead, in the terminal window that contains the running server process, press `control+c`. This will kill the server process. Then, I can run `bundle exec jekyll serve` to rebuild the site and relaunch the dev server.
 
-### 2.0 Create Necessary Files and Rules
-
-Next, I needed to create some files for the new gems to work with. All of these files were created in the project's `root`.
-+ `$ touch Procfile`
-+ `$ touch config.ru`
-+ `$ touch rakefile.rb`
-
-Inside `Procfile` (btw, no extension of that file), I added the following lines:
-
-`web: bundle exec puma -t 8:32 -w 3 -p $PORT`
-
-Meanwhile, inside `config.ru`, I added these lines:
-
-`web: bundle exec puma -t 8:32 -w 3 -p $PORT`
-
-Lastly, I added the following lines to `rakefile.rb`
-
+When the last change has been made in a given commit, and it's time to deploy, the main.css needs to be recompiled. This must be done in this order:
 ```
-task :build do
-  system('bundle exec jekyll build')
-end
-
-namespace :assets do
-  task precompile: :build
-end
+$ bundle exec jekyll server
+$ git commit -m meaningful_comment_text
+$ git push master
+$ git push heroku master
 ```
-
-### 3.0 Stage, Comment, Commit and Push Changes
-
-Then, I staged, commented, and committed these changes in git (using a client or the CLI) and pushed these changes to the master branch of the project on GitHub. I'll gloss over instructions on this because it could be done multiple ways depending on individual workflow.
-
-### 4.0 Deploy Site Build to Heroku
-
-Finally, just run `git push heroku master` from within the project `root`.
