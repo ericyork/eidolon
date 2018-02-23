@@ -3,7 +3,7 @@
 - title: Home
   url: /
 - title: UI Kit
-  url: /uikit.html  
+  url: /uikit.html
 - title: Posts
   url: /posts/
 - title: Categories
@@ -13,4 +13,4 @@
 - title: Recipes
   url: /recipes/
 - title: Search
-#   url: /search/
+  url: /search/
