@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "New Logo"
+title:  "New Logo Released Tonight"
 date:   2018-02-22 23:12:16 -0500
 categories: dev-docs
 ---

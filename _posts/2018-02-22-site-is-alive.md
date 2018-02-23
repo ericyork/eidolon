@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Another New Post"
+title:  "Site is Alive"
 date:   2018-02-22 16:24:16 -0500
 categories: dev-docs
 ---
