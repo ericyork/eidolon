@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Optimization Resources for Using GULP"
-date:   2018-02-23 01:16:16 -0500
+title: "Optimization Resources for Using GULP"
+date: 2018-02-23 01:16:16 -0500
 categories: dev-docs
 ---
 Again, these come from MadeMistake, this time the excellent article ["How I'm Using Jekyll in 2017"](https://mademistakes.com/articles/using-jekyll-2017/)
