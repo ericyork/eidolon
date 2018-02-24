@@ -73,7 +73,21 @@
     animation-name: initial;
   }
 }
-
+.site-nav ul li:last-of-type a {
+  visibility: hidden;
+  transform: rotate(315deg);
+  position: relative;
+}
+.site-nav ul li:last-of-type a:before {
+  content: '⚲';
+  visibility: visible;
+  color: #FFF;
+  font-style: normal;
+  font-size: 24px;
+  position: absolute;
+  top: 0px;
+  padding-left: 10px;
+}
 .masthead {
   @include clearfix;
   margin-bottom: 3em;

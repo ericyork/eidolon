@@ -5,7 +5,7 @@ date:   2018-02-22 16:31:16 -0500
 categories: dev-docs
 ---
 
-These instructions combine information from a variety of places, but I got it working basically by following the [instructions here](https://www.jamesward.com/2014/09/24/jekyll-on-heroku). **Update:** The above instructions are incomplete. I'm not exactly sure why, probably something I did wrong/missed/etc., but in any case, in order to get it to work, I *also* had to add a rakefile.rb so the project would build right for Heroku during deployment.
+These instructions combine information from a variety of places, but I got it working basically by following the [instructions here](https://www.jamesward.com/2014/09/24/jekyll-on-heroku). **Update:** The above instructions are incomplete. I'm not exactly sure why, probably something I did wrong/missed/etc., but in any case, in order to get it to work, I *also* had to add a rakefile.rb so the project would build properly on Heroku during deployment.
 
 ### 0.0 Pre-Reqs
 
@@ -65,4 +65,4 @@ Then, I staged, commented, and committed these changes in GitHub (using a client
 
 ### 4.0 Deploy Site Build to Heroku
 
-Finally, just run `git push heroku master` from within the project `root`.
+Finally, just run `git push heroku master` from within the project root and visit the url Heroku assigns (or which you assigned separately) to each project.

@@ -1,18 +1,18 @@
 # Site navigation links
 
-- title: Eidos
+- title: eidos
   url: /
-- title: Topoi
+- title: topoi
   url: /uikit.html
-- title: Taxis
+- title: taxis
   url: /order/
-- title: Lexis
+- title: lexis
   url: /grammar/
-- title: Techne
+- title: techne
   url: /tools/
-- title: Poroi
+- title: poroi
   url: /passages/
-- title: Dolos
+- title: dolos
   url: /tricks/
-- title: Search
+- title: search
   url: /search/
